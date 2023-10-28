@@ -75,6 +75,8 @@ public class Estudiantes2023 {
         Estudiante estudiante = new Estudiante(codigo, nombre, ciclo, pension);
         adicionar(estudiante);
     }
+	
+
 
     // M�todos para manipular el archivo de texto
     private void cargarArchivo() {
@@ -91,6 +93,15 @@ public class Estudiantes2023 {
             JOptionPane.showMessageDialog(null, "Se produjo un error= " + x);
         }
     }
+	
+	public double sumaTotalPensiones() {
+        double suma = 0;
+        for (Estudiante estudiante : estudiantes) {
+            suma += estudiante.getPension();
+        }
+        return suma;
+    }
+	
     public void guardarArchivo() {
         try {
             FileWriter fileWriter = new FileWriter("C:\\Users\\Jeff\\Desktop\\pc04\\estudiantes.txt");
