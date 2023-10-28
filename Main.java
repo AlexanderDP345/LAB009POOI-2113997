@@ -21,7 +21,16 @@ public class Main {
 
             switch (opcion) {
                 
-                case 1:
+                case 1:// Agregar nuevo estudiante
+                String nombres = JOptionPane.showInputDialog("Ingrese NOMBRES:");
+                String apellidos = JOptionPane.showInputDialog("Ingrese APELLIDOS:");
+                int ciclo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese CICLO:"));
+                double pension = Double.parseDouble(JOptionPane.showInputDialog("Ingrese PENSION:"));
+
+                Estudiante nuevoEstudiante = new Estudiante(estudiantes2023.tamano() + 1, nombres + " " + apellidos, ciclo, pension);
+                estudiantes2023.adicionar(nuevoEstudiante);
+                JOptionPane.showMessageDialog(null, "¡Se añadió con éxito!");
+                break;
                     //BUSCAR ESTUDIANTE
                 case 2:
                     // Buscar estudiante
