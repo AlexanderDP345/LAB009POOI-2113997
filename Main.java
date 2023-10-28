@@ -21,33 +21,9 @@ public class Main {
 
             switch (opcion) {
                 
-<<<<<<< HEAD
                 case 1:
                     //BUSCAR ESTUDIANTE
                 case 2:
-=======
-                case 1:public void listarEstudiantes() {
-        if (listaEstudiantes.isEmpty()) {
-            System.out.println("No hay estudiantes registrados.");
-        } else {
-            for (Estudiante estudiante : listaEstudiantes) {
-                System.out.println(estudiante);
-            }
-        }
-    }
-                
-                case 2: public void listarEstudiantesPorApellido() {
-        if (listaEstudiantes.isEmpty()) {
-            System.out.println("No hay estudiantes registrados.");
-        } else {
-            listaEstudiantes.sort(Comparator.comparing(Estudiante::getApellido));
-            for (Estudiante estudiante : listaEstudiantes) {
-                System.out.println(estudiante);
-            }
-        }
-    }
->>>>>>> e19508db2a91a9ae4a89fa506beb878ebb5e7c97
-                
                     // Buscar estudiante
                     
                     // Lógica para buscar por apellido (debes implementarla en la clase Estudiantes2023)
