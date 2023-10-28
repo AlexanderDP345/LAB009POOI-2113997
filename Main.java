@@ -21,7 +21,15 @@ public class Main {
 
             switch (opcion) {
                 
-                case 1:
+                case 1:public void listarEstudiantes() {
+        if (listaEstudiantes.isEmpty()) {
+            System.out.println("No hay estudiantes registrados.");
+        } else {
+            for (Estudiante estudiante : listaEstudiantes) {
+                System.out.println(estudiante);
+            }
+        }
+    }
                 
                 case 2:
                 
