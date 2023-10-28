@@ -32,6 +32,16 @@ public class Main {
     }
                 
                 case 2:
+                    public void listarEstudiantesPorApellido() {
+        if (listaEstudiantes.isEmpty()) {
+            System.out.println("No hay estudiantes registrados.");
+        } else {
+            listaEstudiantes.sort(Comparator.comparing(Estudiante::getApellido));
+            for (Estudiante estudiante : listaEstudiantes) {
+                System.out.println(estudiante);
+            }
+        }
+    }
                 
                     // Buscar estudiante
                     
