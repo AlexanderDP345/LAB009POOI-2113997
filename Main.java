@@ -31,8 +31,7 @@ public class Main {
         }
     }
                 
-                case 2:
-                    public void listarEstudiantesPorApellido() {
+                case 2: public void listarEstudiantesPorApellido() {
         if (listaEstudiantes.isEmpty()) {
             System.out.println("No hay estudiantes registrados.");
         } else {
