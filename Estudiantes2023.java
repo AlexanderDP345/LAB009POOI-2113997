@@ -11,33 +11,51 @@ public class Estudiantes2023 {
     }
 
     public void adicionar(Estudiante estudiante) {
-        //Introduce código
+        //Introduce cï¿½digo
     }
 
     public void eliminar(Estudiante estudiante) {
-        //Introduce código
+        //Introduce cï¿½digo
     }
 
     public Estudiante obtener(int pos) {
-	//Introduce código
+	//Introduce cï¿½digo
         return null;
     }
 
     public Estudiante buscar(int codigo) {
-	//Introduce código        
+	//Introduce cï¿½digo        
 	  return null;
     }
 
     public int tamano() {
-        //Introduce código        
+        //Introduce cï¿½digo        
 	  return 0;
     }
 
     public void listarEstudiantes(){
-        //Introduce código        
+        //Introduce cï¿½digo    a    
+    }
+    public void listarEstudiantesPorApellido() {
+    //Introduce cï¿½digo   b
+    }
+    public void listarEstudiantesPorPensionAscendente() {
+        //Introduce cï¿½digo  c
+    }
+    public void modificarEstudiante(Estudiante estudianteExistente, Estudiante nuevoEstudiante) {
+       //Introduce cï¿½digo  f
+    }
+    public void modificarApellidosMayuscula() {
+    //Introduce cï¿½digo  g
+    }
+    public boolean existeEstudiante(int codigo) {
+        //Introduce cï¿½digo  h
+    }
+    public double sumaTotalPensiones() {
+       //Introduce cï¿½digo  i
     }
 
-    // Métodos para manipular el archivo de texto
+    // Mï¿½todos para manipular el archivo de texto
     private void readFromInputStream(InputStream inputStream) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
         String linea;
@@ -48,7 +66,7 @@ public class Estudiantes2023 {
         br.close();
     }
 
-	// Método que añadir a los estudiantes del archivo .txt en el arrayList estudiantes.
+	// Mï¿½todo que aï¿½adir a los estudiantes del archivo .txt en el arrayList estudiantes.
     private void createStudent(StringTokenizer st){
         int codigo = Integer.parseInt(st.nextToken().trim());
         String nombre = st.nextToken().trim();
@@ -58,7 +76,7 @@ public class Estudiantes2023 {
         adicionar(estudiante);
     }
 
-    // Métodos para manipular el archivo de texto
+    // Mï¿½todos para manipular el archivo de texto
     private void cargarArchivo() {
         try {
             File file = new File("./src/estudiantes.txt");
@@ -71,6 +89,25 @@ public class Estudiantes2023 {
                         "El archivo estudiantes.txt no existe");
         } catch (Exception x) {
             JOptionPane.showMessageDialog(null, "Se produjo un error= " + x);
+        }
+    }
+    public void guardarArchivo() {
+        try {
+            FileWriter fileWriter = new FileWriter("C:\\Users\\Jeff\\Desktop\\pc04\\estudiantes.txt");
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+    
+            for (Estudiante estudiante : estudiantes) {
+                printWriter.println(
+                    estudiante.getCodigo() + "," + 
+                    estudiante.getNombre() + "," +
+                    estudiante.getCiclo() + "," +
+                    estudiante.getPension()
+                );
+            }
+    
+            printWriter.close();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage());
         }
     }
 }

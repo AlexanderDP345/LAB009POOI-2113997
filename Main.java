@@ -22,7 +22,7 @@ public class Main {
             switch (opcion) {
                 
                 case 1:
-                
+                    //BUSCAR ESTUDIANTE
                 case 2:
                 
                     // Buscar estudiante
@@ -38,28 +38,32 @@ public class Main {
                     break;
 
                 case 4:
-                  
+                     //MODIFICAR ESTUDIANTE
 
                 case 5:
                    
-                  
+                    //MODIFICAR APELLIDOS EN MINÚSCULAS.
                 
 
                 case 6:
-                    // Ver todos los estudiantes
+                    //VER TODOS LOS ESTUDIANTES
                    
 
                 case 7:
                 
-                   
+                   //-VER TODOS LOS ESTUDIANTE POR APELLIDOS
                  
                     break;
 
                 case 8:
+
+               //VER TODOS LOS ESTUDIANTE POR PENSIÓN
+
                     
                     break;
 
                 case 9:
+                //total de pensiones
 
                     break;
 
