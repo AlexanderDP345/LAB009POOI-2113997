@@ -31,7 +31,7 @@ public class Main {
                 estudiantes2023.adicionar(nuevoEstudiante);
                 JOptionPane.showMessageDialog(null, "¡Se añadió con éxito!");
                 break;
-                    //BUSCAR ESTUDIANTE
+                    
                 case 2:
                     // Buscar estudiante
                     
