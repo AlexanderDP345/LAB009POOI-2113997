@@ -94,13 +94,7 @@ public class Estudiantes2023 {
         }
     }
 	
-	public double sumaTotalPensiones() {
-        double suma = 0;
-        for (Estudiante estudiante : estudiantes) {
-            suma += estudiante.getPension();
-        }
-        return suma;
-    }
+
 	
     public void guardarArchivo() {
         try {
