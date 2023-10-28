@@ -71,7 +71,9 @@ public class Main {
                     break;
 
                 case 9:
-                //total de pensiones
+                // Total de pensiones
+                JOptionPane.showMessageDialog(null, "** SUMATORIA DE PENSIONES **\n" +
+                "LA SUMA TOTAL ES: S/ " + estudiantes2023.sumaTotalPensiones());
 
                     break;
 
