@@ -75,11 +75,30 @@ public class Estudiantes2023 {
     }
     //listar estudiantes alfabetico  Camila
     public void listarEstudiantes() {
-        //codigo
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println(estudiante);
+        }
     }
     //listar estudiante alfetico por apellido B Camila
     public void listarEstudiantesPorApellido() {
-      //codigo
+      Collections.sort(estudiantes, new Comparator<Estudiante>() {
+            @Override
+            public int compare(Estudiante e1, Estudiante e2) {
+                String[] partesNombre1 = e1.getNombre().split(" ");
+                String[] partesNombre2 = e2.getNombre().split(" ");
+    
+                // Verificar si hay al menos un apellido en ambos estudiantes
+                if (partesNombre1.length > 1 && partesNombre2.length > 1) {
+                    String apellido1 = partesNombre1[1];
+                    String apellido2 = partesNombre2[1];
+    
+                    return apellido1.compareToIgnoreCase(apellido2);
+                } else {
+                    // En caso de que no haya un segundo nombre en uno de los estudiantes, ordenar por nombre completo
+                    return e1.getNombre().compareToIgnoreCase(e2.getNombre());
+                }
+            }
+        });
     }
     
     //modificar estudiante F Jeff
