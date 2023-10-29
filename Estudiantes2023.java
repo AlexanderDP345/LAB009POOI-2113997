@@ -78,9 +78,22 @@ public class Estudiantes2023 {
     }
         //pension menor a mayor C KEVIN
     public void listarEstudiantesPorPensionAscendente() {
-      //codigo
+      Collections.sort(estudiantes, new Comparator<Estudiante>() {
+            @Override
+            public int compare(Estudiante e1, Estudiante e2) {
+                return Double.compare(e1.getPension(), e2.getPension());
+            }
+        });
+        listarEstudiantes();
     }
-    //suma total estudiante I KEVIN
+    public double sumaTotalPensiones() {
+        double suma = 0;
+        for (Estudiante estudiante : estudiantes) {
+            suma += estudiante.getPension();
+        }
+        return suma;
+    }
+	
     
 
     // M�todos para manipular el archivo de texto
