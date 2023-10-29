@@ -21,66 +21,62 @@ public class Main {
 
             switch (opcion) {
                 
-                case 1:// Agregar nuevo estudiante
-                String nombres = JOptionPane.showInputDialog("Ingrese NOMBRES:");
-                String apellidos = JOptionPane.showInputDialog("Ingrese APELLIDOS:");
-                int ciclo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese CICLO:"));
-                double pension = Double.parseDouble(JOptionPane.showInputDialog("Ingrese PENSION:"));
+                case 1: 
+                // Agregar nuevo estudiante D ethan
+              
+                break;
 
-                Estudiante nuevoEstudiante = new Estudiante(estudiantes2023.tamano() + 1, nombres + " " + apellidos, ciclo, pension);
-                estudiantes2023.adicionar(nuevoEstudiante);
-                JOptionPane.showMessageDialog(null, "¡Se añadió con éxito!");
-                break;
-                    
+                
+               
+    
+                //BUSCAR ESTUDIANTE PUEDE BUSCAR POR NOMBRE O CODIGO. ELEGIR UNA OPCIÓN:A – APELLIDO B – CODIGO H Martin
                 case 2:
-                    // Buscar estudiante
-                    
-                    // Lógica para buscar por apellido (debes implementarla en la clase Estudiantes2023)
-                    break;
+                
+                break;
 
-                case 3:
-                    // Eliminar estudiante
-                    // Lógica para listar estudiantes
-                    // Implementar esta parte en la clase Estudiantes2023
-                    // y mostrar los resultados
-                    break;
 
+                 case 3:
+                // Eliminar estudiante E ethan
+                break;
+               
+               
+                   
                 case 4:
-                     //MODIFICAR ESTUDIANTE
+                // Modificar estudiante  jeff
+           
+                    break;
+                  
 
                 case 5:
-                   
-                    //MODIFICAR APELLIDOS EN MINÚSCULAS.
+                // modificar apellidos jeff
                 
+                 break;
 
                 case 6:
-                    //VER TODOS LOS ESTUDIANTES
-                   
-
-                case 7:
+                //6-VER TODOS LOS ESTUDIANTES A Camila
                 
-                   //-VER TODOS LOS ESTUDIANTE POR APELLIDOS
-                 
-                    break;
+                break;
 
+              
+                case 7:
+                //-VER TODOS LOS ESTUDIANTE POR APELLIDOS  B Camila
+                
+                break;
                 case 8:
-
-               //VER TODOS LOS ESTUDIANTE POR PENSIÓN
-
-                    
-                    break;
+                //vER TODOS LOS ESTUDIANTE POR PENSIÓN C Kevin
+                
+                break;
+      
 
                 case 9:
-                // Total de pensiones
-                JOptionPane.showMessageDialog(null, "** SUMATORIA DE PENSIONES **\n" +
-                "LA SUMA TOTAL ES: S/ " + estudiantes2023.sumaTotalPensiones());
-
-                    break;
+                // Total de pensiones I Kevin
+                
+                
+                break;
+            
 
                 case 10:
-                    // Salir
-                    JOptionPane.showMessageDialog(null, "¡Hasta luego!");
-                    break;
+                    
 
                 default:
                     JOptionPane.showMessageDialog(null, "Opción no válida. Por favor, elija una opción válida.");

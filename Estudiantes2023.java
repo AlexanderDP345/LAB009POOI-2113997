@@ -3,57 +3,85 @@ import javax.swing.*;
 import java.io.*;
 
 public class Estudiantes2023 {
-    private static ArrayList<Estudiante> estudiantes;
+    private ArrayList<Estudiante> estudiantes;
 
     public Estudiantes2023() {
         estudiantes = new ArrayList<>();
         cargarArchivo();
     }
-
+    //agregar alumnos D ethan
     public void adicionar(Estudiante estudiante) {
-        //Introduce c�digo
+        //codigo
     }
-
+    
+    // Método para obtener el siguiente código disponible 
+    private int obtenerSiguienteCodigoDisponible() {
+        if (!estudiantes.isEmpty()) {
+            int ultimoCodigo = estudiantes.get(estudiantes.size() - 1).getCodigo();
+            return ultimoCodigo + 1; 
+        } else {
+            return 100; 
+        }
+    }
+    
+    //elimnar estudiante E ethan
     public void eliminar(Estudiante estudiante) {
-        //Introduce c�digo
+        //codigo
     }
 
+    //obtener estudiante 
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    //obtener estudiante 
     public Estudiante obtener(int pos) {
-	//Introduce c�digo
+        if (pos >= 0 && pos < estudiantes.size()) {
+            return estudiantes.get(pos);
+        }
         return null;
     }
-
+    
+    //buscar estudiante
     public Estudiante buscar(int codigo) {
-	//Introduce c�digo        
-	  return null;
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.getCodigo() == codigo) {
+                return estudiante;
+            }
+        }
+        return null;
     }
-
+    //buscar por apellido Martin i
+    
+    
+    
+    //tamaño de alumno  
     public int tamano() {
-        //Introduce c�digo        
-	  return 0;
+        return estudiantes.size();
     }
-
-    public void listarEstudiantes(){
-        //Introduce c�digo    a    
+    //listar estudiantes alfabetico  Camila
+    public void listarEstudiantes() {
+        //codigo
     }
+    //listar estudiante alfetico por apellido B Camila
     public void listarEstudiantesPorApellido() {
-    //Introduce c�digo   b
+      //codigo
     }
-    public void listarEstudiantesPorPensionAscendente() {
-        //Introduce c�digo  c
-    }
+    
+    //modificar estudiante F Jeff
     public void modificarEstudiante(Estudiante estudianteExistente, Estudiante nuevoEstudiante) {
-       //Introduce c�digo  f
+        //codigo
     }
+    //modificar apellido misnusula G Jeff
     public void modificarApellidosMayuscula() {
-    //Introduce c�digo  g
+      //codigo
     }
-    public boolean existeEstudiante(int codigo) {
-        //Introduce c�digo  h
+        //pension menor a mayor C KEVIN
+    public void listarEstudiantesPorPensionAscendente() {
+      //codigo
     }
-    public double sumaTotalPensiones() {
-       //Introduce c�digo  i
-    }
+    //suma total estudiante I KEVIN
+    
 
     // M�todos para manipular el archivo de texto
     private void readFromInputStream(InputStream inputStream) throws IOException {
@@ -75,13 +103,11 @@ public class Estudiantes2023 {
         Estudiante estudiante = new Estudiante(codigo, nombre, ciclo, pension);
         adicionar(estudiante);
     }
-	
-
 
     // M�todos para manipular el archivo de texto
     private void cargarArchivo() {
         try {
-            File file = new File("./src/estudiantes.txt");
+            File file = new File("C:\\Users\\Jeff\\Desktop\\pc04\\estudiantes.txt");
             Class<Estudiantes2023> clazz = Estudiantes2023.class;
             InputStream inputStream = clazz.getResourceAsStream("/estudiantes.txt");
             if (file.exists()) {
@@ -93,15 +119,6 @@ public class Estudiantes2023 {
             JOptionPane.showMessageDialog(null, "Se produjo un error= " + x);
         }
     }
-	
-	public double sumaTotalPensiones() {
-        double suma = 0;
-        for (Estudiante estudiante : estudiantes) {
-            suma += estudiante.getPension();
-        }
-        return suma;
-    }
-	
     public void guardarArchivo() {
         try {
             FileWriter fileWriter = new FileWriter("C:\\Users\\Jeff\\Desktop\\pc04\\estudiantes.txt");
@@ -121,4 +138,5 @@ public class Estudiantes2023 {
             JOptionPane.showMessageDialog(null, "Error al guardar el archivo: " + e.getMessage());
         }
     }
+    
 }
