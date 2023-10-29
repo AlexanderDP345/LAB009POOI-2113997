@@ -37,7 +37,57 @@ public class Main {
     
                 //BUSCAR ESTUDIANTE PUEDE BUSCAR POR NOMBRE O CODIGO. ELEGIR UNA OPCIÓN:A – APELLIDO B – CODIGO H Martin
                 case 2:
-                
+                String[] opcionesBusqueda = {"Código", "Apellido"};
+                int opcionBusqueda = JOptionPane.showOptionDialog(
+                 null,
+                 "Seleccione una opción de búsqueda:",
+                         "Búsqueda de Estudiantes",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.PLAIN_MESSAGE,
+                 null,
+                opcionesBusqueda,
+                opcionesBusqueda[0]
+                 );
+
+                if (opcionBusqueda == 0) { // Búsqueda por Código
+                int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el código del estudiante a buscar:"));
+                Estudiante estudianteEncontrado = estudiantes2023.buscar(codigo);
+
+                if (estudianteEncontrado != null) {
+                JOptionPane.showMessageDialog(
+                null,
+                "Datos del estudiante:\n" + estudianteEncontrado.toString(),
+                "Estudiante Encontrado",
+                JOptionPane.INFORMATION_MESSAGE
+                );
+                } else {
+                JOptionPane.showMessageDialog(
+                null,
+                "El estudiante no está registrado.",
+                "Estudiante No Encontrado",
+                JOptionPane.WARNING_MESSAGE
+                 );
+                }
+                } else if (opcionBusqueda == 1) { // Búsqueda por Apellido
+                String apellidoBuscar = JOptionPane.showInputDialog("Ingrese el apellido del estudiante a buscar:");
+                Estudiante estudiantePorApellido = estudiantes2023.buscarPorApellido(apellidoBuscar);
+        
+                 if (estudiantePorApellido != null) {
+                 JOptionPane.showMessageDialog(
+                null,
+                "Datos del estudiante:\n" + estudiantePorApellido.toString(),
+                "Estudiante Encontrado",
+                JOptionPane.INFORMATION_MESSAGE
+                   );
+                } else {
+                JOptionPane.showMessageDialog(
+                null,
+                "No hay estudiantes registrados con el apellido " + apellidoBuscar,
+                "Estudiante No Encontrado",
+                JOptionPane.WARNING_MESSAGE
+                      );
+                   }
+                }
                 break;
 
 
