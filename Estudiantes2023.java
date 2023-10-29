@@ -103,11 +103,22 @@ public class Estudiantes2023 {
     
     //modificar estudiante F Jeff
     public void modificarEstudiante(Estudiante estudianteExistente, Estudiante nuevoEstudiante) {
-        //codigo
+        int index = estudiantes.indexOf(estudianteExistente);
+        if (index >= 0) {
+            estudiantes.set(index, nuevoEstudiante);
+            guardarArchivo();
+        }
     }
     //modificar apellido misnusula G Jeff
     public void modificarApellidosMayuscula() {
-      //codigo
+        for (Estudiante estudiante : estudiantes) {
+            String[] partesNombre = estudiante.getNombre().split(" ");
+            if (partesNombre.length > 1) {
+                partesNombre[1] = partesNombre[1].toLowerCase(); // Convertir a minúsculas
+                estudiante.setNombre(String.join(" ", partesNombre));
+            }
+        }
+        guardarArchivo(); 
     }
         //pension menor a mayor C KEVIN
     public void listarEstudiantesPorPensionAscendente() {
@@ -124,8 +135,8 @@ public class Estudiantes2023 {
         for (Estudiante estudiante : estudiantes) {
             suma += estudiante.getPension();
         }
-        return suma;
-    }
+        return suma;
+    }
 	
     
 

@@ -107,13 +107,37 @@ public class Main {
                    
                 case 4:
                 // Modificar estudiante  jeff
+                int codigoModificacion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el código del estudiante a modificar:"));
+                Estudiante estudianteModificar = estudiantes2023.buscar(codigoModificacion);
+                if (estudianteModificar != null) {
+                String nuevoNombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre:");
+                int nuevoCiclo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nuevo ciclo:"));
+                double nuevaPension = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la nueva pensión:"));
+                Estudiante nuevoEstudianteModificado = new Estudiante(estudianteModificar.getCodigo(), nuevoNombre, nuevoCiclo, nuevaPension);
+                estudiantes2023.modificarEstudiante(estudianteModificar, nuevoEstudianteModificado);
+                JOptionPane.showMessageDialog(null, "Estudiante modificado con éxito");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Estudiante no encontrado");
+                    }
            
-                    break;
+                break;
                   
 
                 case 5:
                 // modificar apellidos jeff
-                
+
+                estudiantes2023.modificarApellidosMayuscula();
+
+                StringBuilder estudiantesApellidosEnMinusculas = new StringBuilder();
+                estudiantesApellidosEnMinusculas.append("----------------------------------------------------------------------------\n");
+                estudiantesApellidosEnMinusculas.append("CODIGO DE ESTUDIANTE NOMBRE Y APELLIDOS CICLO PENSION\n");
+                estudiantesApellidosEnMinusculas.append("----------------------------------------------------------------------------\n");
+                for (Estudiante estudiante : estudiantes2023.getEstudiantes()) {
+                estudiantesApellidosEnMinusculas.append(estudiante.getCodigo()).append(" ").append(estudiante.getNombre()).append(" ").append(estudiante.getCiclo()).append(" ").append(estudiante.getPension()).append("\n");
+                 }
+                estudiantesApellidosEnMinusculas.append("----------------------------------------------------------------------------");
+
+                JOptionPane.showMessageDialog(null, estudiantesApellidosEnMinusculas.toString(), "Apellidos en Minúsculas", JOptionPane.INFORMATION_MESSAGE);
                  break;
 
                 case 6:
@@ -161,7 +185,7 @@ public class Main {
                 estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------");
 
                 JOptionPane.showMessageDialog(null, estudiantesOrdenadosPorPension.toString(), "Estudiantes Ordenados por Pensión Ascendente", JOptionPane.INFORMATION_MESSAGE);
-                break;
+                break;
 
                 case 9:
                 // Total de pensiones I Kevin
@@ -177,7 +201,7 @@ public class Main {
                 totalPensionesInfo.append("LA SUMA TOTAL ES: S/ ").append(sumaPensiones);
             
                 JOptionPane.showMessageDialog(null, totalPensionesInfo.toString(), "Total de Pensiones", JOptionPane.INFORMATION_MESSAGE);
-                break;
+                break;
             
             
 
