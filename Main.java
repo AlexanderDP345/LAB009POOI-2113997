@@ -64,15 +64,35 @@ public class Main {
                 break;
                 case 8:
                 //vER TODOS LOS ESTUDIANTE POR PENSIÓN C Kevin
-                
-                break;
-      
+               estudiantes2023.listarEstudiantesPorPensionAscendente();
+                StringBuilder estudiantesOrdenadosPorPension = new StringBuilder();
+                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------\n");
+                estudiantesOrdenadosPorPension.append("CODIGO DE ESTUDIANTE NOMBRE Y APELLIDOS CICLO PENSION\n");
+                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------\n");
+                for (Estudiante estudiante : estudiantes2023.getEstudiantes()) {
+                estudiantesOrdenadosPorPension.append(estudiante.getCodigo()).append(" ").append(estudiante.getNombre()).append(" ").append(estudiante.getCiclo()).append(" ").append(estudiante.getPension()).append("\n");
+                }
+                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------");
+
+                JOptionPane.showMessageDialog(null, estudiantesOrdenadosPorPension.toString(), "Estudiantes Ordenados por Pensión Ascendente", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
                 case 9:
                 // Total de pensiones I Kevin
-                
-                
-                break;
+                double sumaPensiones = estudiantes2023.sumaTotalPensiones();
+                StringBuilder totalPensionesInfo = new StringBuilder();
+                totalPensionesInfo.append("----------------------------------------------------------------------------\n");
+                totalPensionesInfo.append("CODIGO DE ESTUDIANTE NOMBRE Y APELLIDOS CICLO PENSION\n");
+                totalPensionesInfo.append("----------------------------------------------------------------------------\n");
+                for (Estudiante estudiante : estudiantes2023.getEstudiantes()) {
+                    totalPensionesInfo.append(estudiante.getCodigo()).append(" ").append(estudiante.getNombre()).append(" ").append(estudiante.getCiclo()).append(" ").append(estudiante.getPension()).append("\n");
+                }
+                totalPensionesInfo.append("----------------------------------------------------------------------------\n");
+                totalPensionesInfo.append("LA SUMA TOTAL ES: S/ ").append(sumaPensiones);
+            
+                JOptionPane.showMessageDialog(null, totalPensionesInfo.toString(), "Total de Pensiones", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            
             
 
                 case 10:
