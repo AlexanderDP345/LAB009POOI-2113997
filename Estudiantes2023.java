@@ -11,7 +11,10 @@ public class Estudiantes2023 {
     }
     //agregar alumnos D ethan
     public void adicionar(Estudiante estudiante) {
-        //codigo
+        int nuevoCodigo = obtenerSiguienteCodigoDisponible(); 
+        estudiante.setCodigo(nuevoCodigo);
+        estudiantes.add(estudiante);
+        guardarArchivo();
     }
     
     // Método para obtener el siguiente código disponible 
