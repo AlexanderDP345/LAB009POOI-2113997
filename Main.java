@@ -42,7 +42,15 @@ public class Main {
 
 
                  case 3:
-                // Eliminar estudiante E ethan
+                int idEstudianteEliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese ID del estudiante a eliminar:"));
+                Estudiante estudianteAEliminar = estudiantes2023.buscar(idEstudianteEliminar);
+
+                if (estudianteAEliminar != null) {
+                estudiantes2023.eliminar(estudianteAEliminar);
+                JOptionPane.showMessageDialog(null, "¡Se eliminó con éxito!");
+                } else {
+                JOptionPane.showMessageDialog(null, "No se encontró un estudiante con el ID ingresado.");
+                }
                 break;
                
                
