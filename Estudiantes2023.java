@@ -29,7 +29,8 @@ public class Estudiantes2023 {
     
     //elimnar estudiante E ethan
     public void eliminar(Estudiante estudiante) {
-        //codigo
+       estudiantes.remove(estudiante);
+        guardarArchivo();
     }
 
     //obtener estudiante 
