@@ -30,7 +30,6 @@ public class Main {
                 Estudiante nuevoEstudiante = new Estudiante(estudiantes2023.tamano() + 1, nombres + " " + apellidos, ciclo, pension);
                 estudiantes2023.adicionar(nuevoEstudiante);
                 JOptionPane.showMessageDialog(null, "¡Se añadió con éxito!");
-              
                 break;
 
                 
