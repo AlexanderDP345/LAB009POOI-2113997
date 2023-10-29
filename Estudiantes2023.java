@@ -56,7 +56,17 @@ public class Estudiantes2023 {
         return null;
     }
     //buscar por apellido Martin i
-    
+    public Estudiante buscarPorApellido(String apellido) {
+        for (Estudiante estudiante : estudiantes) {
+            String[] partesNombre = estudiante.getNombre().split(" ");
+            if (partesNombre.length > 1) {
+                if (partesNombre[1].equalsIgnoreCase(apellido)) {
+                    return estudiante;
+                }
+            }
+        }
+        return null;
+    }
     
     
     //tamaño de alumno  
