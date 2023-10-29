@@ -132,19 +132,21 @@ public class Main {
 
               
                 case 7:
-                //-VER TODOS LOS ESTUDIANTE POR APELLIDOS  B Camila
-                    estudiantes2023.listarEstudiantesPorPensionAscendente();
-                StringBuilder estudiantesOrdenadosPorPension = new StringBuilder();
-                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------\n");
-                estudiantesOrdenadosPorPension.append("CODIGO DE ESTUDIANTE NOMBRE Y APELLIDOS CICLO PENSION\n");
-                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------\n");
-                for (Estudiante estudiante : estudiantes2023.getEstudiantes()) {
-                estudiantesOrdenadosPorPension.append(estudiante.getCodigo()).append(" ").append(estudiante.getNombre()).append(" ").append(estudiante.getCiclo()).append(" ").append(estudiante.getPension()).append("\n");
-                }
-                estudiantesOrdenadosPorPension.append("----------------------------------------------------------------------------");
+                    //-VER TODOS LOS ESTUDIANTE POR APELLIDOS  B Camila
+                estudiantes2023.listarEstudiantesPorApellido();
+                StringBuilder estudiantesOrdenadosPorApellido = new StringBuilder();
+                estudiantesOrdenadosPorApellido.append("----------------------------------------------------------------------------\n");
+                estudiantesOrdenadosPorApellido.append("CODIGO DE ESTUDIANTE NOMBRE Y APELLIDOS CICLO PENSION\n");
+                estudiantesOrdenadosPorApellido.append("----------------------------------------------------------------------------\n");
+                 for (Estudiante estudiante : estudiantes2023.getEstudiantes()) {
+                estudiantesOrdenadosPorApellido.append(estudiante.getCodigo()).append(" ").append(estudiante.getNombre()).append(" ").append(estudiante.getCiclo()).append(" ").append(estudiante.getPension()).append("\n");
+                 }
+                 estudiantesOrdenadosPorApellido.append("----------------------------------------------------------------------------");
 
-                JOptionPane.showMessageDialog(null, estudiantesOrdenadosPorPension.toString(), "Estudiantes Ordenados por Pensión Ascendente", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, estudiantesOrdenadosPorApellido.toString(), "Estudiantes Ordenados por Apellido", JOptionPane.INFORMATION_MESSAGE);
+   
                 break;
+                   
                     
                 case 8:
                 //vER TODOS LOS ESTUDIANTE POR PENSIÓN C Kevin
